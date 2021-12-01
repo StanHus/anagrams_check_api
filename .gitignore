@@ -1,0 +1,7 @@
+node_modules
+personal_project
+dist
+.env
+.env.heroku
+.vscode/last.sql
+.vscode/settings.json
