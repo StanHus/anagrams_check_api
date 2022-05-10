@@ -18,6 +18,13 @@ const getAnagrams = (word: string) => {
     : res.filter((ans: string) => ans !== word).join(", ");
 };
 
+//get the default
+
+app.get("/", async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.json("Input your word as a parameter for the link");
+});
+
 //get the anagrams
 
 app.get("/:word", async (req, res) => {
