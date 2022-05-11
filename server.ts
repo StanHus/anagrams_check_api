@@ -22,7 +22,7 @@ const getAnagrams = (word: string) => {
 
 app.get("/", async (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
-  res.json("Input your word as a parameter for the link");
+  res.json("Input any word as a parameter into the link, i.e. ...herokuapp.com/your_word");
 });
 
 //get the anagrams
