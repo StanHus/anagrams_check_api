@@ -11,10 +11,14 @@ app.use(
   })
 );
 
+const capitalise = (word: string) => {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
 const getAnagrams = (word: string) => {
   const res = anagrams(word);
   return res == undefined || res.length === 0
-    ? "This word doesn't have any anagrams that we know of"
+    ? `${capitalise(word)} doesn't have any anagrams that we know of`
     : res.filter((ans: string) => ans !== word).join(", ");
 };
 
